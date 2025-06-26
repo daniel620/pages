@@ -1,4 +1,4 @@
-baseURL = 'https://daniel620.github.io/pages/'
+baseURL = 'https://daniel620.github.io/pages'
 languageCode = 'en-us'
 title = 'Daniels Page'
 theme = 'hugo-book'
