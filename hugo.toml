@@ -1,6 +1,6 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://daniel620.github.io/pages/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Daniels Page'
 theme = 'hugo-book'
 
 # Book configuration - improves URL handling
@@ -18,11 +18,11 @@ enableGitInfo = true
   startLevel = 1  # Start TOC from H1 headers
 
 # Optional: Add custom menu items
-[menu]
-[[menu.after]]
-  name = "GitHub"
-  url = "https://github.com/daniel620/pages"
-  weight = 10
+# [menu]
+# [[menu.after]]
+#   name = "GitHub"
+#   url = "https://github.com/daniel620/pages"
+#   weight = 10
 
 [params]
   # Theme color: light, dark, or auto

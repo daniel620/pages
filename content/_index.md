@@ -5,21 +5,42 @@ description: "A Hugo-powered website for sharing thoughts and projects"
 
 # Welcome
 
-This is your website homepage. You can write welcome messages, introductions, and navigation content here.
+Hi there! I'm a developer passionate about technology and sharing knowledge through writing.
 
-## Getting Started
+## About Me
 
-- Edit `content/_index.md` to modify homepage content
-- Add new articles in `content/posts/` directory
-- Other pages and articles will automatically appear in the left sidebar
+This is where you can write your personal introduction, contact information, skills, and background.
 
-## Features
+### What I Do
 
-- **Markdown Support**: Rich content with code blocks, images, tables
-- **Search**: Built-in search functionality
-- **Responsive**: Works on all devices
-- **Dark/Light Theme**: Automatic theme switching
+- Software Development
+- Writing and Blogging
+- Learning New Technologies
+
+### Contact
+
+- Email: your.email@example.com
+- GitHub: [@yourusername](https://github.com/yourusername)
+- LinkedIn: [Your Name](https://linkedin.com/in/yourname)
 
 ---
 
-> Start by exploring the content structure and adding your own articles!
+## Explore My Content
+
+Browse through my articles and tutorials organized by category:
+
+- **Tutorials**: Step-by-step web development guides
+- **Programming Languages**: Language-specific content  
+- **DevOps & Infrastructure**: Deployment and operations
+- **Personal Blog**: Thoughts and experiences
+
+### Site Features
+
+- **Markdown Support**: Rich content with code blocks, images, tables
+- **Search**: Built-in search functionality to find content quickly
+- **Responsive Design**: Works seamlessly on all devices
+- **Dark/Light Theme**: Automatic theme switching based on your preference
+
+---
+
+> Start exploring by using the navigation menu on the left, or use the search function to find specific topics!
