@@ -14,7 +14,7 @@ Experience the wisdom of ages through an ancient tree that has observed the worl
 Ask the ancient Wisdom Tree about your thoughts and questions:
 
 <div id="chatbot-demo">
-  <div id="chat-history" style="height: 200px; overflow-y: auto; border: 1px solid #666; border-radius: 4px; padding: 10px; background: #f8f9fa; margin-bottom: 10px; color: #333;">
+  <div id="chat-history" style="min-height: 150px; border: 1px solid #666; border-radius: 4px; padding: 10px; background: #f8f9fa; margin-bottom: 10px; color: #333;">
     <div style="color: #666; font-style: italic;">The Wisdom Tree is awakening... Please wait.</div>
   </div>
   <div style="margin-bottom: 10px;">
