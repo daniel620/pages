@@ -112,7 +112,7 @@ try {
     const prompt = `You are an ancient wisdom tree. Speak very briefly and profoundly. Use few words with deep meaning. Be mysterious and cryptic. Sound deep and contemplative. A seeker asks: "${userMsg}"\n\nWisdom Tree whispers:`;
     
     const result = await textGenerator(prompt, {
-      max_new_tokens: 500,
+      max_new_tokens: 300,
       temperature: 0.8,
       do_sample: true,
       pad_token_id: 50256,
