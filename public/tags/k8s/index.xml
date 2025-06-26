@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>K8s on My New Hugo Site</title><link>http://localhost:1313/tags/k8s/</link><description>Recent content in K8s on My New Hugo Site</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Tue, 24 Jun 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/k8s/index.xml" rel="self" type="application/rss+xml"/><item><title>Kubernetes Basics</title><link>http://localhost:1313/posts/devops/kubernetes-basics/</link><pubDate>Tue, 24 Jun 2025 00:00:00 +0000</pubDate><guid>http://localhost:1313/posts/devops/kubernetes-basics/</guid><description>&lt;h1 id="kubernetes-basics">
+ Kubernetes Basics
+ &lt;a class="anchor" href="#kubernetes-basics">#&lt;/a>
+&lt;/h1>
+&lt;p>Introduction to Kubernetes container orchestration.&lt;/p>
+&lt;h2 id="core-concepts">
+ Core Concepts
+ &lt;a class="anchor" href="#core-concepts">#&lt;/a>
+&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>Pods&lt;/strong>: Smallest deployable units&lt;/li>
+&lt;li>&lt;strong>Services&lt;/strong>: Network abstraction over pods&lt;/li>
+&lt;li>&lt;strong>Deployments&lt;/strong>: Manage pod replicas&lt;/li>
+&lt;li>&lt;strong>ConfigMaps&lt;/strong>: Configuration data&lt;/li>
+&lt;li>&lt;strong>Secrets&lt;/strong>: Sensitive data&lt;/li>
+&lt;/ul>
+&lt;h2 id="basic-pod-definition">
+ Basic Pod Definition
+ &lt;a class="anchor" href="#basic-pod-definition">#&lt;/a>
+&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">apiVersion&lt;/span>: &lt;span style="color:#ae81ff">v1&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">kind&lt;/span>: &lt;span style="color:#ae81ff">Pod&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">metadata&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">name&lt;/span>: &lt;span style="color:#ae81ff">my-app&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">spec&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">containers&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - &lt;span style="color:#f92672">name&lt;/span>: &lt;span style="color:#ae81ff">app&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">image&lt;/span>: &lt;span style="color:#ae81ff">nginx:latest&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">ports&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - &lt;span style="color:#f92672">containerPort&lt;/span>: &lt;span style="color:#ae81ff">80&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="deployment-example">
+ Deployment Example
+ &lt;a class="anchor" href="#deployment-example">#&lt;/a>
+&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">apiVersion&lt;/span>: &lt;span style="color:#ae81ff">apps/v1&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">kind&lt;/span>: &lt;span style="color:#ae81ff">Deployment&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">metadata&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">name&lt;/span>: &lt;span style="color:#ae81ff">nginx-deployment&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">spec&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">replicas&lt;/span>: &lt;span style="color:#ae81ff">3&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">selector&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">matchLabels&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">app&lt;/span>: &lt;span style="color:#ae81ff">nginx&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">template&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">metadata&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">labels&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">app&lt;/span>: &lt;span style="color:#ae81ff">nginx&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">spec&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">containers&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - &lt;span style="color:#f92672">name&lt;/span>: &lt;span style="color:#ae81ff">nginx&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">image&lt;/span>: &lt;span style="color:#ae81ff">nginx:1.20&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">ports&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - &lt;span style="color:#f92672">containerPort&lt;/span>: &lt;span style="color:#ae81ff">80&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="common-kubectl-commands">
+ Common kubectl Commands
+ &lt;a class="anchor" href="#common-kubectl-commands">#&lt;/a>
+&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Get pods&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>kubectl get pods
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Describe pod&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>kubectl describe pod my-pod
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Apply configuration&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>kubectl apply -f deployment.yaml
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Scale deployment&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>kubectl scale deployment nginx-deployment --replicas&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#ae81ff">5&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Get logs&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>kubectl logs my-pod
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item></channel></rss>

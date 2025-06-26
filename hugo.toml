@@ -2,3 +2,64 @@ baseURL = 'https://example.org/'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
 theme = 'hugo-book'
+
+# Book configuration - improves URL handling
+disablePathToLower = true
+
+# Enable Git information
+enableGitInfo = true
+
+# Needed for mermaid/katex shortcodes
+[markup]
+[markup.goldmark.renderer]
+  unsafe = true # Allow richer Markdown rendering
+
+[markup.tableOfContents]
+  startLevel = 1  # Start TOC from H1 headers
+
+# Optional: Add custom menu items
+[menu]
+[[menu.after]]
+  name = "GitHub"
+  url = "https://github.com/daniel620/pages"
+  weight = 10
+
+[params]
+  # Theme color: light, dark, or auto
+  BookTheme = 'auto' # Options: 'light', 'dark', 'auto'. Recommended: auto for better UX
+  
+  # Show table of contents on right side
+  BookToC = false # Set to true for documentation style with right-side TOC
+  
+  # (Optional) Set favicon path
+  # BookFavicon = 'favicon.png'
+  
+  # (Optional) Set logo path  
+  # BookLogo = 'logo.png'
+  
+  # Specify main content section
+  BookSection = 'posts' # Show posts directory in left sidebar
+  
+  # Git repository settings for edit links
+  BookRepo = 'https://github.com/daniel620/pages'
+  BookCommitPath = 'commit'  # GitHub uses 'commit', Bitbucket uses 'commits'
+  BookEditPath = 'edit/main' # Enable "Edit this page" links
+  
+  # Date format for git info and blog posts
+  BookDateFormat = 'January 2, 2006'
+  
+  # Enable search functionality
+  BookSearch = true # Flexsearch-based search, builds index on the fly
+  
+  # Enable comments (requires Disqus setup)
+  BookComments = false # Set to true and configure Disqus if needed
+  
+  # Experimental features (use with caution)
+  BookPortableLinks = false    # Enables portable markdown links
+  BookServiceWorker = false    # Enables offline caching
+  BookTranslatedOnly = false   # Show translation dropdown only if translations exist
+
+# Other optional configurations:
+# - Multi-language support ([languages])
+# - Custom menus, navigation, footer  
+# - More theme parameters: check hugo-book documentation

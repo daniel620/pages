@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Reflection on My New Hugo Site</title><link>http://localhost:1313/tags/reflection/</link><description>Recent content in Reflection on My New Hugo Site</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 23 Jun 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/reflection/index.xml" rel="self" type="application/rss+xml"/><item><title>My Development Journey</title><link>http://localhost:1313/posts/blog/my-development-journey/</link><pubDate>Mon, 23 Jun 2025 00:00:00 +0000</pubDate><guid>http://localhost:1313/posts/blog/my-development-journey/</guid><description>&lt;h1 id="my-development-journey">
+ My Development Journey
+ &lt;a class="anchor" href="#my-development-journey">#&lt;/a>
+&lt;/h1>
+&lt;p>Reflecting on my path as a software developer.&lt;/p>
+&lt;h2 id="how-it-started">
+ How It Started
+ &lt;a class="anchor" href="#how-it-started">#&lt;/a>
+&lt;/h2>
+&lt;p>I began programming with simple HTML pages and gradually moved to more complex technologies.&lt;/p>
+&lt;h2 id="key-milestones">
+ Key Milestones
+ &lt;a class="anchor" href="#key-milestones">#&lt;/a>
+&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>2020&lt;/strong>: First HTML/CSS website&lt;/li>
+&lt;li>&lt;strong>2021&lt;/strong>: Learned JavaScript and React&lt;/li>
+&lt;li>&lt;strong>2022&lt;/strong>: Backend development with Node.js&lt;/li>
+&lt;li>&lt;strong>2023&lt;/strong>: Cloud deployment and DevOps&lt;/li>
+&lt;li>&lt;strong>2024&lt;/strong>: Microservices architecture&lt;/li>
+&lt;li>&lt;strong>2025&lt;/strong>: AI and machine learning integration&lt;/li>
+&lt;/ul>
+&lt;h2 id="lessons-learned">
+ Lessons Learned
+ &lt;a class="anchor" href="#lessons-learned">#&lt;/a>
+&lt;/h2>
+&lt;ol>
+&lt;li>&lt;strong>Start small&lt;/strong>: Don&amp;rsquo;t try to learn everything at once&lt;/li>
+&lt;li>&lt;strong>Practice daily&lt;/strong>: Consistency beats intensity&lt;/li>
+&lt;li>&lt;strong>Build projects&lt;/strong>: Theory without practice is useless&lt;/li>
+&lt;li>&lt;strong>Join communities&lt;/strong>: Learning with others accelerates growth&lt;/li>
+&lt;li>&lt;strong>Stay curious&lt;/strong>: Technology evolves rapidly&lt;/li>
+&lt;/ol>
+&lt;h2 id="current-focus">
+ Current Focus
+ &lt;a class="anchor" href="#current-focus">#&lt;/a>
+&lt;/h2>
+&lt;ul>
+&lt;li>Cloud-native applications&lt;/li>
+&lt;li>Container orchestration&lt;/li>
+&lt;li>Developer experience optimization&lt;/li>
+&lt;li>Building scalable systems&lt;/li>
+&lt;/ul>
+&lt;h2 id="whats-next">
+ What&amp;rsquo;s Next?
+ &lt;a class="anchor" href="#whats-next">#&lt;/a>
+&lt;/h2>
+&lt;p>Planning to explore:&lt;/p></description></item></channel></rss>

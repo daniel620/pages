@@ -1,0 +1,122 @@
+<!doctype html><html lang=en-us dir=ltr><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="
+  DevOps & Infrastructure
+  #
+
+Tools and practices for modern software deployment and operations.
+This section covers:
+
+Docker Container Guide
+Kubernetes Basics
+"><meta name=theme-color media="(prefers-color-scheme: light)" content="#ffffff"><meta name=theme-color media="(prefers-color-scheme: dark)" content="#343a40"><meta name=color-scheme content="light dark"><meta property="og:url" content="http://localhost:1313/posts/devops/"><meta property="og:site_name" content="My New Hugo Site"><meta property="og:title" content="DevOps & Infrastructure"><meta property="og:description" content="DevOps & Infrastructure # Tools and practices for modern software deployment and operations.
+This section covers:
+Docker Container Guide Kubernetes Basics"><meta property="og:locale" content="en_us"><meta property="og:type" content="website"><title>DevOps & Infrastructure | My New Hugo Site</title><link rel=icon href=/favicon.png><link rel=manifest href=/manifest.json><link rel=canonical href=http://localhost:1313/posts/devops/><link rel=stylesheet href=/book.min.27c601ff251cc5c9796bb272aace960013cf351d0c28a7e1301487b32d4800ee.css integrity="sha256-J8YB/yUcxcl5a7Jyqs6WABPPNR0MKKfhMBSHsy1IAO4=" crossorigin=anonymous><script defer src=/fuse.min.js></script><script defer src=/en.search.min.00735cddfd889b3a4b254df1af4a747f3dd791409adbf587941ac3d4f3a153e7.js integrity="sha256-AHNc3f2ImzpLJU3xr0p0fz3XkUCa2/WHlBrD1POhU+c=" crossorigin=anonymous></script><link rel=alternate type=application/rss+xml href=http://localhost:1313/posts/devops/index.xml title="My New Hugo Site"></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
+<input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a class="flex align-center" href=/><span>My New Hugo Site</span></a></h2><div class="book-search hidden"><input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><script>document.querySelector(".book-search").classList.remove("hidden")</script><ul><li><input type=checkbox id=section-a5e6ffe5794ea9e5f7cd0433ae8450c1 class=toggle>
+<label for=section-a5e6ffe5794ea9e5f7cd0433ae8450c1 class=flex><a href=/posts/tutorials/ class=flex-auto>Tutorials</a></label><ul><li><a href=/posts/tutorials/web-development-basics/>Getting Started with Web Development</a></li><li><a href=/posts/tutorials/css-styling/>CSS Styling Guide</a></li><li><a href=/posts/tutorials/javascript-basics/>JavaScript Fundamentals</a></li></ul></li><li><input type=checkbox id=section-af3e065cc460d6b38eaca7258e6e2695 class=toggle>
+<label for=section-af3e065cc460d6b38eaca7258e6e2695 class=flex><a href=/posts/programming/ class=flex-auto>Programming Languages</a></label><ul><li><a href=/posts/programming/python-basics/>Python for Beginners</a></li><li><a href=/posts/programming/go-introduction/>Go Programming Introduction</a></li></ul></li><li><input type=checkbox id=section-a2fc2d877964e56cfed8fec3b9ae6af1 class=toggle checked>
+<label for=section-a2fc2d877964e56cfed8fec3b9ae6af1 class=flex><a href=/posts/devops/ class="flex-auto active">DevOps & Infrastructure</a></label><ul><li><a href=/posts/devops/docker-guide/>Docker Container Guide</a></li><li><a href=/posts/devops/kubernetes-basics/>Kubernetes Basics</a></li></ul></li><li><input type=checkbox id=section-e0dc0490a700a79a28c72febb7651241 class=toggle>
+<label for=section-e0dc0490a700a79a28c72febb7651241 class=flex><a href=/posts/blog/ class=flex-auto>Personal Blog</a></label><ul><li><a href=/posts/blog/my-development-journey/>My Development Journey</a></li><li><a href=/posts/blog/remote-work-tips/>Remote Work Tips</a></li></ul></li><li><a href=/posts/hugo-content-management/>Hugo Content Management Guide</a></li><li><a href=/posts/about/>About Me</a></li></ul><ul><li><a href=https://github.com/daniel620/pages target=_blank rel=noopener>GitHub</a></li></ul></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/svg/menu.svg class=book-icon alt=Menu></label><h3>DevOps & Infrastructure</h3><label for=toc-control></label></div></header><article class="markdown book-post"><h2><a href=/posts/devops/docker-guide/>Docker Container Guide</a></h2><div class="flex align-center text-small book-post-date"><img src=/svg/calendar.svg class=book-icon alt>
+<span>June 24, 2025</span></div><div class=text-small><a href=/categories/devops/>Devops</a></div><div class=text-small><a href=/tags/docker/>Docker</a>,
+<a href=/tags/containers/>Containers</a>,
+<a href=/tags/devops/>Devops</a></div><div class=book-post-content><h1 id=docker-container-guide>Docker Container Guide
+<a class=anchor href=#docker-container-guide>#</a></h1><p>Learn how to use Docker for application deployment.</p><h2 id=what-is-docker>What is Docker?
+<a class=anchor href=#what-is-docker>#</a></h2><p>Docker is a platform for developing, shipping, and running applications in containers.</p><h2 id=basic-commands>Basic Commands
+<a class=anchor href=#basic-commands>#</a></h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># Pull an image</span>
+</span></span><span style=display:flex><span>docker pull nginx
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Run a container</span>
+</span></span><span style=display:flex><span>docker run -d -p 80:80 nginx
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># List running containers</span>
+</span></span><span style=display:flex><span>docker ps
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Stop a container</span>
+</span></span><span style=display:flex><span>docker stop container_id
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Remove a container</span>
+</span></span><span style=display:flex><span>docker rm container_id
+</span></span></code></pre></div><h2 id=creating-a-dockerfile>Creating a Dockerfile
+<a class=anchor href=#creating-a-dockerfile>#</a></h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-dockerfile data-lang=dockerfile><span style=display:flex><span><span style=color:#66d9ef>FROM</span><span style=color:#e6db74> node:16-alpine</span><span style=color:#960050;background-color:#1e0010>
+</span></span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010>
+</span></span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>WORKDIR</span><span style=color:#e6db74> /app</span><span style=color:#960050;background-color:#1e0010>
+</span></span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010>
+</span></span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>COPY</span> package*.json ./<span style=color:#960050;background-color:#1e0010>
+</span></span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>RUN</span> npm install<span style=color:#960050;background-color:#1e0010>
+</span></span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010>
+</span></span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>COPY</span> . .<span style=color:#960050;background-color:#1e0010>
+</span></span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010>
+</span></span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>EXPOSE</span><span style=color:#e6db74> 3000</span><span style=color:#960050;background-color:#1e0010>
+</span></span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010>
+</span></span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>CMD</span> [<span style=color:#e6db74>&#34;npm&#34;</span>, <span style=color:#e6db74>&#34;start&#34;</span>]<span style=color:#960050;background-color:#1e0010>
+</span></span></span></code></pre></div><h2 id=docker-compose>Docker Compose
+<a class=anchor href=#docker-compose>#</a></h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#f92672>version</span>: <span style=color:#e6db74>&#39;3.8&#39;</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>services</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>web</span>:
+</span></span><span style=display:flex><span>    <span style=color:#f92672>build</span>: <span style=color:#ae81ff>.</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>ports</span>:
+</span></span><span style=display:flex><span>      - <span style=color:#e6db74>&#34;3000:3000&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>environment</span>:
+</span></span><span style=display:flex><span>      - <span style=color:#ae81ff>NODE_ENV=production</span>
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  <span style=color:#f92672>db</span>:
+</span></span><span style=display:flex><span>    <span style=color:#f92672>image</span>: <span style=color:#ae81ff>postgres:13</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>environment</span>:
+</span></span><span style=display:flex><span>      - <span style=color:#ae81ff>POSTGRES_PASSWORD=secret</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>volumes</span>:
+</span></span><span style=display:flex><span>      - <span style=color:#ae81ff>postgres_data:/var/lib/postgresql/data</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>volumes</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>postgres_data</span>:
+</span></span></code></pre></div></div></article><article class="markdown book-post"><h2><a href=/posts/devops/kubernetes-basics/>Kubernetes Basics</a></h2><div class="flex align-center text-small book-post-date"><img src=/svg/calendar.svg class=book-icon alt>
+<span>June 24, 2025</span></div><div class=text-small><a href=/categories/devops/>Devops</a></div><div class=text-small><a href=/tags/kubernetes/>Kubernetes</a>,
+<a href=/tags/k8s/>K8s</a>,
+<a href=/tags/orchestration/>Orchestration</a>,
+<a href=/tags/devops/>Devops</a></div><div class=book-post-content><h1 id=kubernetes-basics>Kubernetes Basics
+<a class=anchor href=#kubernetes-basics>#</a></h1><p>Introduction to Kubernetes container orchestration.</p><h2 id=core-concepts>Core Concepts
+<a class=anchor href=#core-concepts>#</a></h2><ul><li><strong>Pods</strong>: Smallest deployable units</li><li><strong>Services</strong>: Network abstraction over pods</li><li><strong>Deployments</strong>: Manage pod replicas</li><li><strong>ConfigMaps</strong>: Configuration data</li><li><strong>Secrets</strong>: Sensitive data</li></ul><h2 id=basic-pod-definition>Basic Pod Definition
+<a class=anchor href=#basic-pod-definition>#</a></h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#f92672>apiVersion</span>: <span style=color:#ae81ff>v1</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>kind</span>: <span style=color:#ae81ff>Pod</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>metadata</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>name</span>: <span style=color:#ae81ff>my-app</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>spec</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>containers</span>:
+</span></span><span style=display:flex><span>  - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>app</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>image</span>: <span style=color:#ae81ff>nginx:latest</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>ports</span>:
+</span></span><span style=display:flex><span>    - <span style=color:#f92672>containerPort</span>: <span style=color:#ae81ff>80</span>
+</span></span></code></pre></div><h2 id=deployment-example>Deployment Example
+<a class=anchor href=#deployment-example>#</a></h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#f92672>apiVersion</span>: <span style=color:#ae81ff>apps/v1</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>kind</span>: <span style=color:#ae81ff>Deployment</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>metadata</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>name</span>: <span style=color:#ae81ff>nginx-deployment</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>spec</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>replicas</span>: <span style=color:#ae81ff>3</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>selector</span>:
+</span></span><span style=display:flex><span>    <span style=color:#f92672>matchLabels</span>:
+</span></span><span style=display:flex><span>      <span style=color:#f92672>app</span>: <span style=color:#ae81ff>nginx</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>template</span>:
+</span></span><span style=display:flex><span>    <span style=color:#f92672>metadata</span>:
+</span></span><span style=display:flex><span>      <span style=color:#f92672>labels</span>:
+</span></span><span style=display:flex><span>        <span style=color:#f92672>app</span>: <span style=color:#ae81ff>nginx</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>spec</span>:
+</span></span><span style=display:flex><span>      <span style=color:#f92672>containers</span>:
+</span></span><span style=display:flex><span>      - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>nginx</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>image</span>: <span style=color:#ae81ff>nginx:1.20</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>ports</span>:
+</span></span><span style=display:flex><span>        - <span style=color:#f92672>containerPort</span>: <span style=color:#ae81ff>80</span>
+</span></span></code></pre></div><h2 id=common-kubectl-commands>Common kubectl Commands
+<a class=anchor href=#common-kubectl-commands>#</a></h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># Get pods</span>
+</span></span><span style=display:flex><span>kubectl get pods
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Describe pod</span>
+</span></span><span style=display:flex><span>kubectl describe pod my-pod
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Apply configuration</span>
+</span></span><span style=display:flex><span>kubectl apply -f deployment.yaml
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Scale deployment</span>
+</span></span><span style=display:flex><span>kubectl scale deployment nginx-deployment --replicas<span style=color:#f92672>=</span><span style=color:#ae81ff>5</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Get logs</span>
+</span></span><span style=display:flex><span>kubectl logs my-pod
+</span></span></code></pre></div></div></article><footer class=book-footer><div class="flex flex-wrap justify-between"><div><a class="flex align-center" href=https://github.com/daniel620/pages/edit/main/content/posts/devops/_index.md target=_blank rel=noopener><img src=/svg/edit.svg class=book-icon alt>
+<span>Edit this page</span></a></div></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script></footer><label for=menu-control class="hidden book-menu-overlay"></label></div></main></body></html>

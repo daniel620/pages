@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Web on My New Hugo Site</title><link>http://localhost:1313/tags/web/</link><description>Recent content in Web on My New Hugo Site</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 26 Jun 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/web/index.xml" rel="self" type="application/rss+xml"/><item><title>Getting Started with Web Development</title><link>http://localhost:1313/posts/tutorials/web-development-basics/</link><pubDate>Thu, 26 Jun 2025 00:00:00 +0000</pubDate><guid>http://localhost:1313/posts/tutorials/web-development-basics/</guid><description>&lt;h1 id="getting-started-with-web-development">
+ Getting Started with Web Development
+ &lt;a class="anchor" href="#getting-started-with-web-development">#&lt;/a>
+&lt;/h1>
+&lt;p>This is an introduction to web development fundamentals.&lt;/p>
+&lt;h2 id="what-youll-learn">
+ What You&amp;rsquo;ll Learn
+ &lt;a class="anchor" href="#what-youll-learn">#&lt;/a>
+&lt;/h2>
+&lt;ul>
+&lt;li>HTML basics&lt;/li>
+&lt;li>CSS styling&lt;/li>
+&lt;li>JavaScript fundamentals&lt;/li>
+&lt;li>Modern development tools&lt;/li>
+&lt;/ul>
+&lt;h2 id="html-fundamentals">
+ HTML Fundamentals
+ &lt;a class="anchor" href="#html-fundamentals">#&lt;/a>
+&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-html" data-lang="html">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&amp;lt;!DOCTYPE html&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;&lt;span style="color:#f92672">html&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;&lt;span style="color:#f92672">head&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#f92672">title&lt;/span>&amp;gt;My First Page&amp;lt;/&lt;span style="color:#f92672">title&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;/&lt;span style="color:#f92672">head&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;&lt;span style="color:#f92672">body&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#f92672">h1&lt;/span>&amp;gt;Hello World!&amp;lt;/&lt;span style="color:#f92672">h1&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;/&lt;span style="color:#f92672">body&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;/&lt;span style="color:#f92672">html&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="next-steps">
+ Next Steps
+ &lt;a class="anchor" href="#next-steps">#&lt;/a>
+&lt;/h2>
+&lt;p>Continue with CSS styling in the next tutorial.&lt;/p></description></item></channel></rss>
