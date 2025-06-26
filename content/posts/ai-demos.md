@@ -80,8 +80,33 @@ chatSend.onclick = async function() {
   }
   
   chatSend.disabled = true;
-  chatSend.textContent = 'Pondering...';
-  chatHistory.innerHTML = '<div style="color: #666; font-style: italic;">The Wisdom Tree is contemplating your words...</div>';
+  chatSend.textContent = 'Wait...';
+  
+  // Clear input field to show message was sent
+  chatInput.value = '';
+  
+  // Show thinking animation
+  chatHistory.innerHTML = `
+    <div style="color: #228B22; font-weight: bold; margin: 8px 0;">
+      <strong>You:</strong> ${userMsg}
+    </div>
+    <div style="color: #666; font-style: italic; margin: 8px 0;">
+      🌳 <span id="thinking-dots">The Wisdom Tree is contemplating your words</span><span id="dots">...</span>
+    </div>
+  `;
+  
+  // Animate the thinking dots
+  let dotCount = 0;
+  const thinkingInterval = setInterval(() => {
+    dotCount = (dotCount + 1) % 4;
+    const dotsElement = document.getElementById('dots');
+    if (dotsElement) {
+      dotsElement.textContent = '.'.repeat(dotCount);
+    }
+  }, 500);
+  
+  // Small delay to ensure DOM updates before heavy computation
+  await new Promise(resolve => setTimeout(resolve, 100));
   
 try {
     const prompt = `You are an ancient wisdom tree. Speak very briefly and profoundly. Use few words with deep meaning. Be mysterious and cryptic. Sound deep and contemplative. A seeker asks: "${userMsg}"\n\nWisdom Tree whispers:`;
@@ -129,10 +154,17 @@ try {
       response = response.substring(0, 397) + '...';
     }
     
+    // Clear thinking animation
+    clearInterval(thinkingInterval);
+    
     displayQA(userMsg, response);
     
   } catch (error) {
     console.error('Generation error:', error);
+    
+    // Clear thinking animation on error
+    clearInterval(thinkingInterval);
+    
     displayQA(userMsg, "The ancient roots stir with confusion. Please ask your question again, seeker.");
   }
   
@@ -142,6 +174,49 @@ try {
 
 chatInput.addEventListener('keydown', function(e) {
   if (e.key === 'Enter' && !chatSend.disabled) chatSend.onclick();
+});
+
+// Memory cleanup when page is unloaded
+window.addEventListener('beforeunload', function() {
+  if (textGenerator) {
+    textGenerator = null;
+  }
+});
+
+// Cleanup when page becomes hidden (user switches tabs or minimizes app)
+document.addEventListener('visibilitychange', function() {
+  if (document.hidden && textGenerator) {
+    // Optional: Release model when tab is hidden for memory management
+    console.log('Page hidden - model still active');
+  }
+});
+
+// Mobile-specific cleanup events
+window.addEventListener('pagehide', function() {
+  if (textGenerator) {
+    textGenerator = null;
+    console.log('Mobile: Page hidden, model cleared');
+  }
+});
+
+// iOS Safari specific - when app goes to background
+window.addEventListener('blur', function() {
+  if (textGenerator) {
+    console.log('Mobile: App backgrounded');
+  }
+});
+
+// Android Chrome specific - when app is minimized
+document.addEventListener('freeze', function() {
+  if (textGenerator) {
+    textGenerator = null;
+    console.log('Mobile: App frozen, model cleared');
+  }
+});
+
+// When app resumes (optional - could reinitialize if needed)
+document.addEventListener('resume', function() {
+  console.log('Mobile: App resumed');
 });
 
 initializeModels();
